@@ -1,0 +1,39 @@
+CREATE TABLE `student`.`student` (
+  `Student_ID` INT NOT NULL,
+  `Student_name` VARCHAR(45) NOT NULL,
+  `Batch_num` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`Student_ID`, `Student_name`));
+---------------------------
+INSERT INTO `Student`.`student` (`Student_ID`, `Student_name`, `Batch_num`) VALUES ('1', 'Lahari', 'B14');
+---------------------------
+
+CREATE TABLE `student`.`batch` (
+  `Id` INT NOT NULL,
+  `Student name` VARCHAR(45) NOT NULL,
+  `Batch_ID` VARCHAR(45) NOT NULL,
+  `Jan 23 2020` VARCHAR(45) NULL,
+  `Jan 24 2020` VARCHAR(45) NULL,
+  `Jan 25 2020` VARCHAR(45) NULL,
+  PRIMARY KEY (`Id`));
+-----------------------------
+INSERT INTO `student`.`batch` (`Id`, `Student name`, `Batch_ID`, `Jan 23 2020`, `Jan 24 2020`, `Jan 25 2020`) VALUES ('2', 'Amira', 'B10', 'P', 'A', 'P');
+INSERT INTO `student`.`batch` (`Id`, `Student name`, `Batch_ID`, `Jan 23 2020`, `Jan 24 2020`, `Jan 25 2020`) VALUES ('8', 'Riyaz', 'B6', 'P', 'A', 'A');
+INSERT INTO `student`.`batch` (`Id`, `Student name`, `Batch_ID`, `Jan 23 2020`, `Jan 24 2020`, `Jan 25 2020`) VALUES ('1', 'Lahari', 'B14', 'P', 'P', 'P');
+INSERT INTO `student`.`batch` (`Id`, `Student name`, `Batch_ID`, `Jan 23 2020`, `Jan 24 2020`, `Jan 25 2020`) VALUES ('3', 'Ben', 'B11', 'P', 'P', 'P');
+
+-----------------------------
+1. INSERT INTO `Student`.`student` (`Student_ID`, `Student_name`, `Batch_num`) VALUES ('4', 'Ajit', 'B10');
+2. INSERT INTO `Student`.`batch` (`Batch_ID`, `Student_name`, `Jan 23 2020`,`Jan 24 2020`,`Jan 25 2020`) VALUES ('B8', 'Arun', 'P','P','P');
+3. UPDATE Student.batch
+	SET `Jan 23 2020` = "A"
+	WHERE Id = 6;
+4. SELECT `Student_name` ,  `Jan 23 2020`,`Jan 24 2020`,`Jan 25 2020`
+	FROM Student.student
+	INNER JOIN Student.batch 
+   	ON student.Student_ID = batch.Id
+	WHERE `Student_ID` = 1;
+5. SELECT `Batch_ID`,`Student_name` ,  `Jan 23 2020`,`Jan 24 2020`,`Jan 25 2020`
+	FROM Student.batch
+	INNER JOIN Student.student 
+    	ON student.Student_ID = batch.Id
+	WHERE Batch_ID = "B1";

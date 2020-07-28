@@ -1,0 +1,15 @@
+ref: https://www.youtube.com/watch?v=x4HWOocjoz4
+install wamp server - 
+end of installation change default browser and editor
+check for green wampserver icon right side down
+open browser- localhost:80
+find the port for MySQL
+ - mine is MySQL:3308
+
+--------------
+now open MySQL...click database....
+manage connection....conn name-->
+set port # 3308
+click testconnection.....close
+
+now click database again--->connect to database.
